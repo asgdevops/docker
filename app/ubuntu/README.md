@@ -174,9 +174,9 @@
   ```
 
 # :page_facing_up: Script files
-- [sshd_config](sshd_config)
-- [ubuntu-base.Dockerfile](ubuntu-base.Dockerfile)
-- [ubuntu-devops.Dockerfile](ubuntu-devops.Dockerfile)
+- [sshd_config](scripts/sshd_config)
+- [ubuntu-base.Dockerfile](scripts/ubuntu-base.Dockerfile)
+- [ubuntu-devops.Dockerfile](scripts/ubuntu-devops.Dockerfile)
 
 # :books: References
 - [Ubuntu official image](https://hub.docker.com/_/ubuntu)
