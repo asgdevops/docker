@@ -33,8 +33,7 @@
     - `ol7:py-cx`: is the name of the oracle linux 7 custom image within python3 and python-cx installed.
 
 # :page_facing_up: Script files
-- [sshd_config](sshd_config)
-- [ol7.Dockerfile](ol7.Dockerfile)
+- [ol7.Dockerfile](scripts/ol7.Dockerfile)
 
 # :books: References
 - [Installing cx_Oracle and Oracle Instant Client via Oracle Linux Yum Server](https://blogs.oracle.com/linux/post/installing-cx_oracle-and-oracle-instant-client-via-oracle-linux-yum-server)
