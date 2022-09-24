@@ -4,18 +4,20 @@ USER root
 ENV DEBIAN_FRONTEND noninteractive
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+ARG username
+
 # Install sudo and SSHD
 RUN apt update -y && apt install -y sudo 
 
 # Set up devops user
-RUN useradd -rm -d /home/devops -s /bin/bash -g root -G sudo -u 1000 devops 
-RUN echo devops:devops | chpasswd
-RUN echo "devops    ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+RUN useradd -rm -d /home/$username -s /bin/bash -g root -G sudo -u 1000 $username
+RUN echo $username:$username | chpasswd
+RUN echo "$username    ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-USER devops
-WORKDIR /home/devops
+USER $username
+WORKDIR /home/$username
 
 CMD ["sleep", "infinity"]
 
 #...
-# docker build . -f ubuntu-base.Dockerfile -t ubuntu:base
+# docker build . --build-arg username=devops -f ubuntu-base.Dockerfile -t ubuntu:base

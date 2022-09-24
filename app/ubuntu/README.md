@@ -70,7 +70,7 @@
   --name ubuntu-00 \
   --network unet \
   --publish 2200:22 \
-  ubuntu:devops 
+  ubuntu:base 
   
   docker run \
   --detach \

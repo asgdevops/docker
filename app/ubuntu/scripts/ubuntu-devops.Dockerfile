@@ -1,6 +1,7 @@
 FROM ubuntu:base
 USER devops
 
+# Debug mode
 ENV DEBIAN_FRONTEND noninteractive
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
